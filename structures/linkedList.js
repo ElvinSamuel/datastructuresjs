@@ -136,15 +136,4 @@ function LinkedList() {
     
 }
 
-// Let's implement the linked list.
-var conga = new LinkedList();
-conga.add('Kitten');
-conga.add('Puppy');
-conga.add('Dog');
-conga.add('Cat');
-conga.add('Fish');
-console.log(conga.size());
-console.log(conga.removeAt(3));
-console.log(conga.elementAt(3));
-console.log(conga.indexOf('Puppy'));
-console.log(conga.size());
+module.exports = LinkedList;

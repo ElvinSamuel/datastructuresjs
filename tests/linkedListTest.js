@@ -1,33 +1,28 @@
-var Stack = require('../structures/stack.js');
+var LinkedList = require('../structures/linkedList.js');
 
-var testStack = new Stack;
+var testLinkedList = new LinkedList;
 
-/* TESTING TIME */
-console.log(testStack.GetCount());
-// return --> 0
+// Let's implement the linked list.
+var testLinkedList = new LinkedList();
 
-console.log(testStack.Push('Some String'));
+// Populate the list with data
+testLinkedList.add('Kitten');
+testLinkedList.add('Puppy');
+testLinkedList.add('Dog');
+testLinkedList.add('Cat');
+testLinkedList.add('Fish');
 
-console.log(testStack.Push(3005));
+console.log(testLinkedList.size());
+// return --> 5
 
-console.log(testStack.Push(true));
+console.log(testLinkedList.removeAt(3));
+// return --> Cat
 
-console.log(testStack.Push(3.14));
+console.log(testLinkedList.elementAt(3));
+// return --> Fish
 
-console.log(testStack.DisplayAll());
-// return --> <everything I Pushed>
+console.log(testLinkedList.indexOf('Puppy'));
+// return --> 1
 
-console.log(testStack.GetCount());
+console.log(testLinkedList.size());
 // return --> 4
-
-console.log(testStack.Peek());
-// return --> 3.14
-
-console.log(testStack.Pop());
-// return --> 3.14
-
-console.log(testStack.Pop());
-// return --> true
-
-console.log(testStack.DisplayAll());
-// return --> <everything minus 'true' and '3.14'
