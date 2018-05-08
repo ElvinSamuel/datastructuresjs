@@ -27,7 +27,7 @@ Stack.prototype.Push = function(data) {
     count++;
 };
 
-this.Peek = function(){
+Stack.prototype.Peek = function(){
     //If there are no items, returns null. (avoid error)
     if(top === null){
         return null;
@@ -36,7 +36,7 @@ this.Peek = function(){
     }
 };
 
-this.Pop = function(){
+Stack.prototype.Pop = function(){
     if (top === null){
         return null;
         } else {
@@ -52,7 +52,7 @@ this.Pop = function(){
     }
 };
 
-this.DisplayAll = function(){
+Stack.prototype.DisplayAll = function(){
     if(top === null){
         return null;
     } else {
@@ -69,6 +69,4 @@ this.DisplayAll = function(){
     }
 }
 
-/* Tests */
-var testStack = new Stack();
-console.log(testStack.GetCount());
+module.exports = Stack;
