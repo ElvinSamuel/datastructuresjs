@@ -43,7 +43,7 @@ let HashTable = function(){
     };
     
     this.remove = function(key) {
-        var index = has(key, storageLimit);
+        var index = Hash(key, storageLimit);
         
         if (storage[index].length === 1 && storage[index][0][0] === key){
             delete storage[index];
@@ -57,7 +57,7 @@ let HashTable = function(){
     };
     
     this.lookup = function(key){
-        var index = hash(key, storageLimit);
+        var index = Hash(key, storageLimit);
         
         if (storage[index] === undefined){
             return undefined;
@@ -71,4 +71,7 @@ let HashTable = function(){
     };
 };
 
-module.exports = Hash;
+module.exports = {
+    Hash,
+    HashTable
+};
